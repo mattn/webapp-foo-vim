@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+$(function() {
+  $('#countup').click(function(data) {
+    $.post("/foo/api?callback=?", function(data) {
+      $('#count').text(data.value)
+    }, "json");
+  });
+});
+</script>
+  <title>hello world</title>
+</head>
+<body>
+Count:<span id="count">0</span><br>
+<input id="countup" type="button" value="Count Up">
+</body>
+</html>
