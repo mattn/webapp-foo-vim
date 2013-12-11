@@ -9,7 +9,7 @@ $(function() {
     $.post("/foo/api?callback=?", function(data) {
       $('#count').text(data.value)
     }, "json");
-  });
+  }).click();
 });
 </script>
   <title>hello world</title>
