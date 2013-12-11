@@ -2,7 +2,6 @@ let s:basedir = expand('<sfile>:h:h:h') . '/static'
 let s:count = 0
 
 function! webapp#foo#handle(req)
-	echo a:req.method
   if a:req.path == '/foo'
     " redirect
     return webapp#redirect(a:req, "/foo/")
